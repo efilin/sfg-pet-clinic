@@ -2,12 +2,14 @@ package guru.springframework.sfgpetclinic.service.map;
 
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.service.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created by efilin on 04.01.2021.
  */
+@Service
 public class VetServiceMap extends AbctractMapService<Vet, Long> implements VetService {
 
     @Override
@@ -27,7 +29,7 @@ public class VetServiceMap extends AbctractMapService<Vet, Long> implements VetS
 
     @Override
     public Vet save(Vet object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
