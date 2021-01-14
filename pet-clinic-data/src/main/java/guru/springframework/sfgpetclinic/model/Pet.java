@@ -5,10 +5,19 @@ import java.time.LocalDate;
 /**
  * Created by efilin on 31.12.2020.
  */
-public class Pet {
+public class Pet extends BaseEntity {
+    private String name;
     private PetType petType;
     private Owner owner;
-    private LocalDate birthdate;
+    private LocalDate birthDate;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public PetType getPetType() {
         return petType;
@@ -26,11 +35,11 @@ public class Pet {
         this.owner = owner;
     }
 
-    public LocalDate getBirthdate() {
-        return birthdate;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthdate(LocalDate birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 }
